@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>...</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <body>
+        <div class="container">
+            <div class="progress-bar">
+                <div class="step">
+                    <p>Dados Pessoais</p>
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Endereço</p>
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Login</p>
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+            </div>
+            <div class="form-outer">
+                <form action="api.php" method="POST" id="form">
+
+                    <div class="page slide-page">
+                        <div class="title">Dados Pessoais</div>
+                        <div class="field">
+                            <div class="label">Nome</div>
+                            <input type="text" required name="name"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">Email</div>
+                            <input type="text" required name="email"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">Data de nascimnto</div>
+                            <input type="date" required name="date"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">RG</div>
+                            <input type="text" required name="rg"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">CPF</div>
+                            <input type="text" required name="cpf"/>
+                        </div>
+                        <div class="field">
+                            <button class="firstNext next">Proximo</button>
+                        </div>
+                    </div> 
+
+                    <div class="page slide-page">
+                        <div class="title">Endereço</div>
+                        <div class="field">
+                            <div class="label">Rua</div>
+                            <input type="text" required name="name"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">Numero</div>
+                            <input type="number" required name="number"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">Bairro</div>
+                            <input type="text" required name="street"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">Estado</div>
+                            <select type="text" required name="state"/>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                                <option value="EX">Estrangeiro</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <div class="label">Cidade</div>
+                            <input type="text" required name="city"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">CEP</div>
+                            <input type="text" required name="cep"/>
+                        </div>
+
+                        <div class="field btns">
+                            <button class="prev-1 prev">Voltar</button>
+                            <button class="next-1 next">Proximo</button>
+                        </div>
+                    </div> 
+
+                    <div class="page slide-page">
+                        <div class="title">Login</div>
+                        <div class="field">
+                            <div class="label">Usuario</div>
+                            <input type="text" required name="user"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">Senha</div>
+                            <input type="password" required name="password"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">Confirmar Senha</div>
+                            <input type="password" required name="password_c"/>
+                        </div>
+                        <div class="field">
+                            <div class="label">Imagem</div>
+                            <input type="file" required name="pic"/>
+                        </div>
+                        <div class="field btns">
+                            <button>Concluir</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
